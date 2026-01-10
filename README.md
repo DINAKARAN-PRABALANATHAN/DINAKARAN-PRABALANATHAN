@@ -1,5 +1,4 @@
 - 👋 Hi, I’m @DINAKARAN-PRABALANATHAN
-- 👀 I’m interested in Blockchain Technology 
-- 🌱 I’m currently learning Blockchain development
-- 💞️ I’m looking for mentor
+- 👀 I’m interested in Blockchain Technology and AI 
+- 🌱 I am a Quality Assurance Technician at Amazon with over 5 years of experience in manual and automation testing. My expertise spans Playwright, Selenium, Pytest, Python, and JavaScript, with a focus on mobile and web application testing using BDD methodologies. I've been recognized with an Innovation Award at Amazon for developing innovative testing solutions. I also bring leadership experience from serving as Assistant National Director at WERP-India, where I earned the Excellence in Leadership Award. Committed to continuous learning and software excellence.
 - 📫 To reach me on dinakaranprabalanathan@gmail.com
