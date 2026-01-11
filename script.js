@@ -145,3 +145,148 @@ if (hamburger && navLinks) {
         }
     });
 }
+
+// Theme Toggle (Dark/Light Mode)
+const themeToggle = document.querySelector('.theme-toggle');
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+function setTheme(isDark) {
+    if (isDark) {
+        document.body.classList.remove('light-mode');
+        localStorage.setItem('theme', 'dark');
+    } else {
+        document.body.classList.add('light-mode');
+        localStorage.setItem('theme', 'light');
+    }
+}
+
+// Check saved preference or system preference
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'light') {
+    setTheme(false);
+} else if (savedTheme === 'dark') {
+    setTheme(true);
+}
+
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        const isCurrentlyDark = !document.body.classList.contains('light-mode');
+        setTheme(!isCurrentlyDark);
+    });
+}
+
+// Project Modal
+const projectData = {
+    'Automatic Test Re-runner Script': {
+        description: 'A comprehensive automation solution that monitors test results and automatically re-runs failed tests. The system operates 24/7, ensuring maximum test coverage and reducing manual intervention.',
+        features: [
+            'Automated monitoring of test execution results',
+            'Intelligent retry logic with configurable parameters',
+            '24/7 automated processing without manual intervention',
+            'Integration with REST API for seamless workflow',
+            'Detailed logging and reporting capabilities'
+        ],
+        impact: '$4,838',
+        impactLabel: 'saved annually'
+    },
+    'Automatic Rule Trigger Tool': {
+        description: 'Streamlined MTS/DTS Automation tool that automates daily rule triggering across multiple device pools, eliminating repetitive manual tasks.',
+        features: [
+            'Automated daily rule triggering',
+            'Multi-device pool support',
+            'Cloud Desktop integration',
+            'Scheduled execution capabilities',
+            'Error handling and notifications'
+        ],
+        impact: '0.5 hrs/day',
+        impactLabel: 'time saved'
+    },
+    'Kill Switch Mechanism': {
+        description: 'Python-based automation tool designed to quickly cancel pending tasks during build deliveries, preventing resource waste and improving deployment efficiency.',
+        features: [
+            'Rapid task cancellation capability',
+            'REST API integration',
+            'Build delivery optimization',
+            'Resource management improvements',
+            'Emergency stop functionality'
+        ],
+        impact: '35.98 hrs',
+        impactLabel: 'saved annually'
+    },
+    'VLS Functionality Testing Framework': {
+        description: 'Comprehensive test framework for Headless and Multi-modal devices with standardized testing processes ensuring consistent quality across all device types.',
+        features: [
+            'Comprehensive test plans for multiple device types',
+            'Standardized testing processes',
+            'Pytest integration',
+            'Headless device support',
+            'Multi-modal device testing'
+        ],
+        impact: '100%',
+        impactLabel: 'coverage'
+    }
+};
+
+// Create modal element
+const modalHTML = `
+<div class="modal-overlay" id="projectModal">
+    <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <div class="modal-body">
+            <div class="project-tags" id="modalTags"></div>
+            <h2 id="modalTitle"></h2>
+            <p class="description" id="modalDescription"></p>
+            <h3>Key Features</h3>
+            <ul id="modalFeatures"></ul>
+            <div class="modal-impact">
+                <div class="project-impact">
+                    <span class="impact-value" id="modalImpactValue"></span>
+                    <span class="impact-label" id="modalImpactLabel"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+`;
+
+document.body.insertAdjacentHTML('beforeend', modalHTML);
+
+const modal = document.getElementById('projectModal');
+const modalClose = modal.querySelector('.modal-close');
+
+document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('click', () => {
+        const title = card.querySelector('h3').textContent;
+        const data = projectData[title];
+        
+        if (data) {
+            document.getElementById('modalTitle').textContent = title;
+            document.getElementById('modalDescription').textContent = data.description;
+            document.getElementById('modalTags').innerHTML = card.querySelector('.project-tags').innerHTML;
+            document.getElementById('modalFeatures').innerHTML = data.features.map(f => `<li>${f}</li>`).join('');
+            document.getElementById('modalImpactValue').textContent = data.impact;
+            document.getElementById('modalImpactLabel').textContent = data.impactLabel;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    });
+});
+
+modalClose.addEventListener('click', () => {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+});
+
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+});
