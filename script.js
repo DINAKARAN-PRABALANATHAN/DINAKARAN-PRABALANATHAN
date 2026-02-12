@@ -177,53 +177,54 @@ if (themeToggle) {
 
 // Project Modal
 const projectData = {
-    'Automatic Test Re-runner Script': {
-        description: 'A comprehensive automation solution that monitors test results and automatically re-runs failed tests. The system operates 24/7, ensuring maximum test coverage and reducing manual intervention.',
+    'MCP-based Failure Triage System': {
+        description: 'An autonomous failure triage and recovery system built on MCP Server/Client architecture, integrated with an AI chatbot and REST API tools. Completely eliminates daily manual triage activities.',
         features: [
-            'Automated monitoring of test execution results',
-            'Intelligent retry logic with configurable parameters',
-            '24/7 automated processing without manual intervention',
-            'Integration with REST API for seamless workflow',
-            'Detailed logging and reporting capabilities'
-        ],
-        impact: '$4,838',
-        impactLabel: 'saved annually'
-    },
-    'Automatic Rule Trigger Tool': {
-        description: 'Streamlined MTS/DTS Automation tool that automates daily rule triggering across multiple device pools, eliminating repetitive manual tasks.',
-        features: [
-            'Automated daily rule triggering',
-            'Multi-device pool support',
-            'Cloud Desktop integration',
-            'Scheduled execution capabilities',
-            'Error handling and notifications'
-        ],
-        impact: '0.5 hrs/day',
-        impactLabel: 'time saved'
-    },
-    'Kill Switch Mechanism': {
-        description: 'Python-based automation tool designed to quickly cancel pending tasks during build deliveries, preventing resource waste and improving deployment efficiency.',
-        features: [
-            'Rapid task cancellation capability',
-            'REST API integration',
-            'Build delivery optimization',
-            'Resource management improvements',
-            'Emergency stop functionality'
-        ],
-        impact: '35.98 hrs',
-        impactLabel: 'saved annually'
-    },
-    'VLS Functionality Testing Framework': {
-        description: 'Comprehensive test framework for Headless and Multi-modal devices with standardized testing processes ensuring consistent quality across all device types.',
-        features: [
-            'Comprehensive test plans for multiple device types',
-            'Standardized testing processes',
-            'Pytest integration',
-            'Headless device support',
-            'Multi-modal device testing'
+            'AI-powered failure analysis and root cause categorization',
+            'Automated re-runs triggered based on failure patterns',
+            'Jira and TestRail automatic updates',
+            'Safe code validation in isolated directories',
+            'Email/Slack notifications to owners',
+            'MCP Server/Client architecture for extensibility'
         ],
         impact: '100%',
-        impactLabel: 'coverage'
+        impactLabel: 'manual triage eliminated'
+    },
+    'Automated Test Re-runner System': {
+        description: 'A comprehensive automation solution using Python and REST APIs that reruns failed test suites during idle time, maximizing device utilization and improving test coverage.',
+        features: [
+            'Automated monitoring of test execution results',
+            'Intelligent retry logic during idle time',
+            'REST API integration for seamless workflow',
+            'Improved device utilization',
+            'Detailed logging and reporting capabilities'
+        ],
+        impact: '100s hrs',
+        impactLabel: 'saved monthly'
+    },
+    'Device Health Check & Jira Automation': {
+        description: 'Automated health check system across 200+ devices with automatic Jira ticket creation for failures, drastically reducing manual monitoring effort.',
+        features: [
+            'Automated health checks across 200+ devices',
+            'Automatic Jira ticket creation for failures',
+            'Real-time device status monitoring',
+            'Reduced manual effort drastically',
+            'Integration with device lab infrastructure'
+        ],
+        impact: '200+',
+        impactLabel: 'devices monitored'
+    },
+    'Test Suite Comparator Tool': {
+        description: 'Tool to identify missing test modules across builds and branches, ensuring complete test coverage and preventing gaps in testing.',
+        features: [
+            'Cross-build test module comparison',
+            'Branch-level test coverage analysis',
+            'Missing module identification',
+            'Coverage gap reporting',
+            'Build validation support'
+        ],
+        impact: '100%',
+        impactLabel: 'coverage tracking'
     }
 };
 
