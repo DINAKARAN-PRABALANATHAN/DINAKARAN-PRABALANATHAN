@@ -980,6 +980,30 @@ body.light-mode .theme-toggle {
     color: var(--light-gray);
 }
 
+.testimonial-cta {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.testimonial-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.testimonial-btn:hover {
+    background: var(--primary);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
 /* Project Modal */
 .project-card {
     cursor: pointer;

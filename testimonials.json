@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Team Lead",
+    "role": "Team Lead",
+    "company": "Amazon",
+    "message": "Dinakaran's automation solutions have significantly improved our testing efficiency. His innovative approach to problem-solving is remarkable.",
+    "approved": true
+  },
+  {
+    "name": "Senior Manager",
+    "role": "Senior Manager",
+    "company": "Amazon",
+    "message": "A dedicated professional who consistently delivers high-quality work. His expertise in Playwright and Python automation is exceptional.",
+    "approved": true
+  },
+  {
+    "name": "National Director",
+    "role": "National Director",
+    "company": "WERP-India",
+    "message": "His leadership skills and ability to coordinate teams made a significant impact during his tenure. A true asset to any organization.",
+    "approved": true
+  }
+]

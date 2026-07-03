@@ -119,6 +119,47 @@ async function fetchGitHubRepos() {
 
 fetchGitHubRepos();
 
+// Fetch and render testimonials from JSON
+async function loadTestimonials() {
+    const container = document.getElementById('testimonials-grid');
+    if (!container) return;
+
+    try {
+        const response = await fetch('testimonials.json');
+        const testimonials = await response.json();
+
+        const approved = testimonials.filter(t => t.approved);
+
+        if (!approved.length) {
+            container.innerHTML = '<p class="loading">No testimonials yet.</p>';
+            return;
+        }
+
+        container.innerHTML = approved.map(t => {
+            const initials = t.name.split(' ').map(w => w[0]).join('').toUpperCase().slice(0, 2);
+            return `
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"${t.message}"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">${initials}</div>
+                        <div class="author-info">
+                            <h4>${t.name}</h4>
+                            <p>${t.company}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }).join('');
+    } catch (error) {
+        container.innerHTML = '<p class="loading">Failed to load testimonials.</p>';
+        console.error('Error loading testimonials:', error);
+    }
+}
+
+loadTestimonials();
+
 // Mobile hamburger menu toggle
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');

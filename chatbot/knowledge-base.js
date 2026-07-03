@@ -11,44 +11,64 @@ const knowledgeBase = {
   // Personal Information (Requirement 8.1 - About section)
   personal: {
     name: "Dinakaran Prabalanathan",
-    role: "Quality Assurance Technician",
+    role: "Software Engineer II in Test (SE2)",
     company: "Amazon",
-    location: "Coimbatore, Tamil Nadu, India (Currently in Chennai)",
+    location: "Tirupur, Tamil Nadu, India (Currently in Chennai)",
     yearsOfExperience: "5+",
-    summary: "Quality Assurance Technician with over 5 years of experience in manual and automation testing. Expertise spans Playwright, Selenium, Pytest, Python, and JavaScript, with a focus on mobile and web application testing using BDD methodologies.",
+    summary: "Software Engineer II in Test (SE2) with over 5 years of professional experience specializing in Python-based automation frameworks, developer tools, and comprehensive test support for engineering teams at Amazon. Expert in collaborating with developers to establish requirements, debug intricate system failures, and build innovative engineering tools including REST API integrations and Agentic AI-powered diagnostics.",
     highlights: [
-      "Innovation Award recipient at Amazon for developing innovative testing solutions",
-      "Excellence in Leadership Award from WERP-India",
-      "Saved $5K+ annually through automation improvements"
+      "Engineered AI-powered MCP toolkit with 6 modular servers and 178 tools",
+      "Reduced test analysis cycles from 30-50 minutes to 3-5 minutes",
+      "Authored 200+ automated test cases across firmware, device setups, and media frameworks",
+      "Built a 24/7 Python automation engine for intelligent test reruns",
+      "85 code reviews authored, 53 reviewed",
+      "Innovation Awards recipient at Amazon",
+      "Excellence in Leadership Award from WERP-India"
     ]
   },
 
   // Experience Timeline (Requirement 8.2 - 2019 to present)
   experience: [
     {
+      title: "Software Engineer II in Test (SE2) — Test & Developer Support",
+      company: "Amazon",
+      duration: "Jul 2026 - Present",
+      location: "Chennai, India",
+      responsibilities: [
+        "Delivering dedicated technical test support to the core development team",
+        "Collaborating with developers and project leads to establish testing requirements and define risk-mitigation strategies",
+        "Reviewing and optimizing automated test infrastructure using Python",
+        "Collaborated closely with firmware developers, core network groups, and project leads",
+        "Authored 85 code reviews, 53 reviewed"
+      ],
+      technologies: ["Python", "PyTest", "Code Reviews", "Developer Support"]
+    },
+    {
       title: "Quality Assurance Technician",
       company: "Amazon",
-      duration: "Apr 2024 - Present",
-      location: "Chennai, Tamil Nadu, India",
+      duration: "Apr 2024 - Jul 2026",
+      location: "Chennai, India",
       responsibilities: [
-        "Leading automation testing initiatives using Playwright, Selenium, and Pytest",
-        "Developed innovative testing solutions recognized with the Innovation Award",
-        "Saved $5K+ annually through automation improvements",
-        "Building robust test frameworks to ensure consistent quality at scale"
+        "Designed, developed, and executed comprehensive automated test scripts and frameworks using Python, pytest, and tox",
+        "Authored over 200+ automated test cases spanning firmware updates, device setups, sensor streaming, and media frameworks",
+        "Managed daily execution and validation of 200+ automated test suites per build cycle",
+        "Built a 24/7 Python automation engine that polls build systems, fetches test results via REST APIs, isolates failures, and triggers intelligent reruns",
+        "Identified and tracked over 200 critical software defects with detailed root-cause log analysis",
+        "Engineered an AI-powered QA toolkit utilizing MCP with 6 modular servers and 178 tools, reducing analysis from 30-50 min to 3-5 min"
       ],
-      technologies: ["Playwright", "Python", "Selenium", "Pytest"]
+      technologies: ["Python", "PyTest", "Playwright", "tox", "REST API", "MCP", "Agentic AI"]
     },
     {
       title: "Device Associate",
       company: "Amazon",
       duration: "May 2021 - Apr 2024",
-      location: "Chennai, Tamil Nadu, India",
+      location: "Chennai, India",
       responsibilities: [
-        "Worked on device testing and quality assurance processes",
-        "Gained hands-on experience with mobile and web application testing",
-        "Applied BDD methodologies for comprehensive test coverage"
+        "Conducted structured manual testing for functional, regression, and integration phases on embedded Linux and Android hardware devices",
+        "Authored Python script to automate daily hardware health checks across 2 labs and 200+ target devices",
+        "Developed a Branch Comparator tool to analyze test suite alignments across Mainline and Release builds"
       ],
-      technologies: ["Device Testing", "BDD", "Manual Testing"]
+      technologies: ["Python", "Linux", "Android", "Jira", "Manual Testing"]
     },
     {
       title: "Assistant National Director (Intern)",
@@ -66,66 +86,71 @@ const knowledgeBase = {
 
   // Skills and Technologies (Requirement 8.3)
   skills: {
-    automation: ["Playwright", "Selenium", "Pytest", "Python Automation"],
-    programming: ["Python", "JavaScript"],
+    automation: ["PyTest (Fixtures, Parametrization, Custom Assertions)", "Playwright (Python & JavaScript)", "Selenium", "tox", "pexpect"],
+    programming: ["Python (5+ years)", "Bash Scripting", "JavaScript"],
     testing: [
-      "Automation Testing",
-      "Manual Testing",
-      "Mobile Testing",
-      "Web Application Testing",
-      "Performance Testing",
+      "Functional Testing",
+      "Regression Testing",
       "Integration Testing",
-      "BDD (Behavior Driven Development)",
+      "Performance Testing",
+      "Smoke Testing",
+      "Sanity Testing",
+      "Manual Testing",
+      "Embedded Linux & Android Testing",
       "REST API Testing"
     ],
     methodologies: [
-      "Software Testing Life Cycle (STLC)",
-      "Equivalence Class Partitioning",
-      "Boundary Value Testing",
-      "State Transition Testing"
+      "Agile/Scrum",
+      "Software Development Life Cycle (SDLC)",
+      "Full-lifecycle QA",
+      "Developer Test Support",
+      "Root Cause Analysis",
+      "Log Analysis (journalctl)"
     ],
-    cloud: ["AWS"],
-    tools: ["Git", "JIRA", "Flask"],
-    frameworks: ["Pytest", "Playwright", "Selenium"]
+    cloud: ["AWS CDK", "Dual-pipeline Deployments (Beta/Prod)"],
+    tools: ["Git", "JIRA", "TestRail", "Postman", "adb (Android/Linux testing)"],
+    frameworks: ["PyTest", "Playwright", "Selenium", "tox"],
+    ai: ["Agentic AI QA toolkits", "Model Context Protocol (MCP)", "REST API integrations", "JSON/CSV Data Pipelines"]
   },
 
   // Projects with descriptions and metrics (Requirement 8.5)
   projects: [
     {
-      name: "Automatic Test Re-runner Script",
-      description: "Automated test rerun processes with 24/7 automated processing for improved testing efficiency and resource utilization.",
+      name: "AI-Powered QA Toolkit (MCP)",
+      description: "Engineered an AI-powered QA toolkit utilizing Model Context Protocol with 6 modular servers and 178 tools inside the IDE, enabling autonomous failure triage, root cause analysis, automated re-runs, and Jira/TestRail updates.",
+      technologies: ["MCP", "Agentic AI", "Python", "REST API"],
+      impact: "90% reduction in analysis time (30-50 min to 3-5 min)",
+      metrics: {
+        timeSaved: "90%",
+        tools: "178",
+        servers: "6"
+      }
+    },
+    {
+      name: "24/7 Automated Rerun Engine",
+      description: "Built a Python automation engine that polls build systems, fetches test results via REST APIs, isolates failures, and triggers intelligent reruns without human intervention.",
       technologies: ["Python", "REST API", "Automation"],
-      impact: "$4,838 saved annually",
+      impact: "Hundreds of hours saved monthly",
       metrics: {
-        costSavings: "$4,838",
-        period: "annually"
+        timeSaved: "100s hours",
+        period: "monthly"
       }
     },
     {
-      name: "Automatic Rule Trigger Tool",
-      description: "Streamlined MTS/DTS Automation by automating daily rule triggering across device pools.",
-      technologies: ["Python", "Cloud Desktop"],
-      impact: "0.5 hrs/day time saved",
+      name: "Device Health Check & Jira Automation",
+      description: "Automated daily hardware health checks across 2 labs and 200+ target devices, cutting evaluation hours to minutes with auto-generated Jira tickets for failures.",
+      technologies: ["Python", "Jira API"],
+      impact: "200+ devices monitored",
       metrics: {
-        timeSaved: "0.5 hours",
-        period: "daily"
+        devicesMonitored: "200+",
+        labs: "2"
       }
     },
     {
-      name: "Kill Switch Mechanism",
-      description: "Python-based automation tool for cancelling pending tasks during build deliveries.",
-      technologies: ["Python", "REST API"],
-      impact: "35.98 hrs saved annually",
-      metrics: {
-        timeSaved: "35.98 hours",
-        period: "annually"
-      }
-    },
-    {
-      name: "VLS Functionality Testing Framework",
-      description: "Comprehensive test plans for Headless and Multi-modal devices with standardized testing processes.",
-      technologies: ["Pytest", "Test Framework"],
-      impact: "100% coverage",
+      name: "Branch Comparator Tool",
+      description: "Analyzes test suite alignments across Mainline and Release builds, reducing missing test modules during deployment readiness phases.",
+      technologies: ["Python", "Comparison Tool"],
+      impact: "100% coverage tracking",
       metrics: {
         coverage: "100%"
       }
@@ -135,10 +160,16 @@ const knowledgeBase = {
   // Awards with dates and organizations (Requirement 8.6)
   awards: [
     {
-      title: "Innovation Award",
+      title: "2x Innovation Awards",
       organization: "Amazon",
-      year: 2023,
+      year: "2023-2024",
       description: "Recognized for developing innovative testing solutions that improved efficiency and saved resources."
+    },
+    {
+      title: "3x Spot Awards",
+      organization: "Amazon",
+      year: "2021-2024",
+      description: "Awarded for quality excellence and outstanding performance in testing activities."
     },
     {
       title: "Excellence in Leadership",
@@ -167,9 +198,10 @@ const knowledgeBase = {
   // Contact information and social links (Requirement 8.7)
   contact: {
     email: "dinakaranprabalanathan@gmail.com",
+    phone: "+91-7708087946",
     linkedin: "https://linkedin.com/in/dinakaran-p",
     github: "https://github.com/DINAKARAN-PRABALANATHAN",
-    location: "Coimbatore, Tamil Nadu, India (Currently in Chennai)",
+    location: "Tirupur, Tamil Nadu, India (Currently in Chennai)",
     resumeAvailable: true
   },
 
@@ -194,12 +226,14 @@ const knowledgeBase = {
 
   // Quick facts for common queries
   quickFacts: {
-    currentRole: "Quality Assurance Technician at Amazon",
+    currentRole: "Software Engineer II in Test (SE2) at Amazon",
     totalExperience: "5+ years",
-    specialization: "Automation Testing with Playwright, Selenium, and Python",
-    location: "Coimbatore, Tamil Nadu, India (Currently in Chennai)",
-    keyAchievement: "Innovation Award at Amazon for developing innovative testing solutions",
-    annualSavings: "$5K+ through automation improvements"
+    specialization: "Python-based automation frameworks, developer tools, and AI-powered diagnostics",
+    location: "Tirupur, Tamil Nadu, India (Currently in Chennai)",
+    keyAchievement: "Engineered AI-powered MCP toolkit with 178 tools reducing analysis from 30-50 min to 3-5 min",
+    codeReviews: "85 authored, 53 reviewed",
+    automatedTestCases: "200+",
+    mcpTools: "178 tools across 6 modular servers"
   }
 };
 
